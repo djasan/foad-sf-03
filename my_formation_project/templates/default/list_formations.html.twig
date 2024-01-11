@@ -1,0 +1,29 @@
+{# templates/default/list_formations.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Formations{% endblock %}
+
+{% block body %}
+    <h1>Liste des Formations</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Résumé</th>
+                <!-- Ajoutez d'autres colonnes en fonction de vos propriétés -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for formation in formations %}
+                <tr>
+                    <td>{{ formation.titre }}</td>
+                    <td>{{ formation.resume }}</td>
+                    <!-- Ajoutez d'autres colonnes en fonction de vos propriétés -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
